@@ -146,18 +146,16 @@ int32_t main()
             int x;
             cin>>x;
             auto itr=st.lower_bound(x);
-            auto i1=itr;
-            auto i2=itr;
-            if((*i1)==x)
+            if((*itr)==x)
             {
-                cout<<*i1<<endl;
-                st.erase(i1);
+                cout<<*itr<<endl;
+                st.erase(itr);
             }
-            else if(i1!=st.begin())
+            else if(itr!=st.begin())
             {
-                i1--;
-                cout<<*i1<<endl;
-                st.erase(i1);
+                itr--;
+                cout<<*itr<<endl;
+                st.erase(itr);
             }
             else
             {
